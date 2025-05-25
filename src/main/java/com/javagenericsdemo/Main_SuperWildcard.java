@@ -97,8 +97,8 @@ public class Main_SuperWildcard {
         // If we know more about the context, we can manually cast (but with caution)
         System.out.println("\nUsing instanceof for safer casting:");
         Object someElement = mysteryList.get(0);
-        if (someElement instanceof Integer) {
-            Integer intValue = (Integer) someElement;
+        if (someElement instanceof Integer intValue) {
+            // Safe to cast since we checked the type
             System.out.println("Retrieved Integer value: " + intValue);
         } else {
             System.out.println("Element is not an Integer, it's: " + someElement.getClass().getSimpleName());
